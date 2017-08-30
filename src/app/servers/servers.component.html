@@ -14,8 +14,7 @@
 </button>
 <p></p>
 <p *ngIf="serverCreated">{{ serverCreationStatus }}</p>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
 
 <h3 class="text-warning">Assignment</h3>
 <label>Username</label>
