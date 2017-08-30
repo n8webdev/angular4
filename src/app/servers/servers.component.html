@@ -13,7 +13,7 @@
   Add Server
 </button>
 <p></p>
-<p>{{ serverCreationStatus }}</p>
+<p *ngIf="serverCreated">{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
 
