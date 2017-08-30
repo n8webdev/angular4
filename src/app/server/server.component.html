@@ -1,2 +1,6 @@
-<p [ngStyle]="{backgroundColor: getColor()}">{{ 'Server' }} with the ID {{ serverID }} and status {{ getStatus() }}.</p>
-<!-- methods can also be passed through a string interpolation (getStatus()) -->
+<!-- mind the syntax for the ngClass directive [ngClass]="{'class': prop <=> 'value'}" -->
+<p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{'online': serverStatus === 'online'}">
+  {{ 'Server' }} with the ID {{ serverID }} and status {{ getStatus() }}.
+  <!-- methods can be passed through a string interpolation (getStatus()) -->
+</p>
+
