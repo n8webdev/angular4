@@ -1,0 +1,14 @@
+<h1 class="text-success">Directives Assignment</h1>
+<hr>
+<button class="btn btn-success"
+(click)="onToggle()">
+  Display Details!
+</button>
+<h3 [ngClass]="{'nop': displayMessage === false}">
+  Nathan Torquato
+</h3>
+<ul>
+  <li *ngFor="let log of logs; let i = index">
+    <span [ngClass]="{'special': i > 3}">{{ log | date:'medium' }};</span>
+  </li>
+</ul>
